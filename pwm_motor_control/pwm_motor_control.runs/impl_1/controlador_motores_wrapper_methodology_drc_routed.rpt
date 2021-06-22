@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Tue Jun 22 21:41:00 2021
+| Date         : Tue Jun 22 22:02:32 2021
 | Host         : DESKTOP-CDDJBQR running 64-bit major release  (build 9200)
 | Command      : report_methodology -file controlador_motores_wrapper_methodology_drc_routed.rpt -pb controlador_motores_wrapper_methodology_drc_routed.pb -rpx controlador_motores_wrapper_methodology_drc_routed.rpx
 | Design       : controlador_motores_wrapper
@@ -23,12 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 30
+             Violations found: 36
 +-----------+----------+------------------------------------------------------------------+------------+
 | Rule      | Severity | Description                                                      | Violations |
 +-----------+----------+------------------------------------------------------------------+------------+
 | CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
 | TIMING-17 | Warning  | Non-clocked sequential cell                                      | 29         |
+| XDCC-5    | Warning  | User Non-Timing constraint/property overwritten                  | 6          |
 +-----------+----------+------------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -181,6 +182,48 @@ Related violations: <none>
 TIMING-17#29 Warning
 Non-clocked sequential cell  
 The clock pin controlador_motores_i/pwm_dc_motor_1/U0/cnt_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+XDCC-5#1 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property PACKAGE_PIN on out_1A overrides a previous user property.
+New Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/pwm_motor_control/pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 176)
+Previous Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/pwm_motor_control/pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 89)
+Related violations: <none>
+
+XDCC-5#2 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property PACKAGE_PIN on out_1B overrides a previous user property.
+New Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/pwm_motor_control/pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 177)
+Previous Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/pwm_motor_control/pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 90)
+Related violations: <none>
+
+XDCC-5#3 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property PACKAGE_PIN on out_2A overrides a previous user property.
+New Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/pwm_motor_control/pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 179)
+Previous Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/pwm_motor_control/pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 101)
+Related violations: <none>
+
+XDCC-5#4 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property PACKAGE_PIN on out_2B overrides a previous user property.
+New Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/pwm_motor_control/pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 180)
+Previous Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/pwm_motor_control/pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 102)
+Related violations: <none>
+
+XDCC-5#5 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property PACKAGE_PIN on pwm_drcha overrides a previous user property.
+New Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/pwm_motor_control/pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 175)
+Previous Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/pwm_motor_control/pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 87)
+Related violations: <none>
+
+XDCC-5#6 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property PACKAGE_PIN on pwm_izda overrides a previous user property.
+New Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/pwm_motor_control/pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 178)
+Previous Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/pwm_motor_control/pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 100)
 Related violations: <none>
 
 

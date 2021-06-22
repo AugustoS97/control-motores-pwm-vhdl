@@ -1,6 +1,18 @@
 set_property SRC_FILE_INFO {cfile:C:/Users/Augusto/Desktop/Proyecto2_FPGA/pwm_motor_control/pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc rfile:../../../pwm_motor_control.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:82 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y9 [get_ports {clk}];  # "GCLK"
+set_property src_info {type:XDC file:1 line:87 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN Y11  [get_ports {pwm_drcha}];  # "JA1"
+set_property src_info {type:XDC file:1 line:89 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN AA11 [get_ports {out_1A}];  # "JA2"
+set_property src_info {type:XDC file:1 line:90 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN Y10  [get_ports {out_1B}];  # "JA3"
+set_property src_info {type:XDC file:1 line:100 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W12 [get_ports {pwm_izda}];  # "JB1"
+set_property src_info {type:XDC file:1 line:101 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W11 [get_ports {out_2A}];  # "JB2"
+set_property src_info {type:XDC file:1 line:102 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V10 [get_ports {out_2B}];  # "JB3"
 set_property src_info {type:XDC file:1 line:175 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T22 [get_ports {pwm_drcha}];  # "LD0"
 set_property src_info {type:XDC file:1 line:176 export:INPUT save:INPUT read:READ} [current_design]
