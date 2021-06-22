@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# control_dir, mod_m_counter, pwm_dc_motor
+# control_dir, control_dir, mod_m_counter, pwm_dc_motor, pwm_dc_motor
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -168,9 +168,13 @@ proc create_root_design { parentCell } {
   set clk [ create_bd_port -dir I clk ]
   set consigna_drcha [ create_bd_port -dir I -from 7 -to 0 consigna_drcha ]
   set dir_motor_drcha [ create_bd_port -dir I dir_motor_drcha ]
+  set dir_motor_izda [ create_bd_port -dir I dir_motor_izda ]
   set out_1A [ create_bd_port -dir O out_1A ]
   set out_1B [ create_bd_port -dir O out_1B ]
+  set out_2A [ create_bd_port -dir O out_2A ]
+  set out_2B [ create_bd_port -dir O out_2B ]
   set pwm_drcha [ create_bd_port -dir O pwm_drcha ]
+  set pwm_izda [ create_bd_port -dir O pwm_izda ]
   set reset [ create_bd_port -dir I reset ]
 
   # Create instance: control_dir_0, and set properties
@@ -180,6 +184,17 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    } elseif { $control_dir_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: control_dir_1, and set properties
+  set block_name control_dir
+  set block_cell_name control_dir_1
+  if { [catch {set control_dir_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $control_dir_1 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -206,15 +221,30 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: pwm_dc_motor_1, and set properties
+  set block_name pwm_dc_motor
+  set block_cell_name pwm_dc_motor_1
+  if { [catch {set pwm_dc_motor_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $pwm_dc_motor_1 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create port connections
-  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins mod_m_counter_0/clk] [get_bd_pins pwm_dc_motor_0/clk]
-  connect_bd_net -net consigna_drcha_1 [get_bd_ports consigna_drcha] [get_bd_pins pwm_dc_motor_0/entrada]
+  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins mod_m_counter_0/clk] [get_bd_pins pwm_dc_motor_0/clk] [get_bd_pins pwm_dc_motor_1/clk]
+  connect_bd_net -net consigna_drcha_1 [get_bd_ports consigna_drcha] [get_bd_pins pwm_dc_motor_0/entrada] [get_bd_pins pwm_dc_motor_1/entrada]
   connect_bd_net -net control_dir_0_dir_A [get_bd_ports out_1A] [get_bd_pins control_dir_0/dir_A]
   connect_bd_net -net control_dir_0_dir_B [get_bd_ports out_1B] [get_bd_pins control_dir_0/dir_B]
+  connect_bd_net -net control_dir_1_dir_A [get_bd_ports out_2A] [get_bd_pins control_dir_1/dir_A]
+  connect_bd_net -net control_dir_1_dir_B [get_bd_ports out_2B] [get_bd_pins control_dir_1/dir_B]
   connect_bd_net -net dir_motor_drcha_1 [get_bd_ports dir_motor_drcha] [get_bd_pins control_dir_0/direccion]
-  connect_bd_net -net mod_m_counter_0_CE [get_bd_pins mod_m_counter_0/CE] [get_bd_pins pwm_dc_motor_0/ce]
+  connect_bd_net -net dir_motor_izda_1 [get_bd_ports dir_motor_izda] [get_bd_pins control_dir_1/direccion]
+  connect_bd_net -net mod_m_counter_0_CE [get_bd_pins mod_m_counter_0/CE] [get_bd_pins pwm_dc_motor_0/ce] [get_bd_pins pwm_dc_motor_1/ce]
   connect_bd_net -net pwm_dc_motor_0_PWM [get_bd_ports pwm_drcha] [get_bd_pins pwm_dc_motor_0/PWM]
-  connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins mod_m_counter_0/reset] [get_bd_pins pwm_dc_motor_0/reset]
+  connect_bd_net -net pwm_dc_motor_1_PWM [get_bd_ports pwm_izda] [get_bd_pins pwm_dc_motor_1/PWM]
+  connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins mod_m_counter_0/reset] [get_bd_pins pwm_dc_motor_0/reset] [get_bd_pins pwm_dc_motor_1/reset]
 
   # Create address segments
 

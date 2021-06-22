@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Tue Jun 22 21:11:07 2021
+| Date         : Tue Jun 22 21:41:00 2021
 | Host         : DESKTOP-CDDJBQR running 64-bit major release  (build 9200)
 | Command      : report_methodology -file controlador_motores_wrapper_methodology_drc_routed.rpt -pb controlador_motores_wrapper_methodology_drc_routed.pb -rpx controlador_motores_wrapper_methodology_drc_routed.rpx
 | Design       : controlador_motores_wrapper
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 22
+             Violations found: 30
 +-----------+----------+------------------------------------------------------------------+------------+
 | Rule      | Severity | Description                                                      | Violations |
 +-----------+----------+------------------------------------------------------------------+------------+
 | CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
-| TIMING-17 | Warning  | Non-clocked sequential cell                                      | 21         |
+| TIMING-17 | Warning  | Non-clocked sequential cell                                      | 29         |
 +-----------+----------+------------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -141,6 +141,46 @@ Related violations: <none>
 TIMING-17#21 Warning
 Non-clocked sequential cell  
 The clock pin controlador_motores_i/pwm_dc_motor_0/U0/cnt_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Warning
+Non-clocked sequential cell  
+The clock pin controlador_motores_i/pwm_dc_motor_1/U0/cnt_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Warning
+Non-clocked sequential cell  
+The clock pin controlador_motores_i/pwm_dc_motor_1/U0/cnt_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Warning
+Non-clocked sequential cell  
+The clock pin controlador_motores_i/pwm_dc_motor_1/U0/cnt_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Warning
+Non-clocked sequential cell  
+The clock pin controlador_motores_i/pwm_dc_motor_1/U0/cnt_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Warning
+Non-clocked sequential cell  
+The clock pin controlador_motores_i/pwm_dc_motor_1/U0/cnt_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Warning
+Non-clocked sequential cell  
+The clock pin controlador_motores_i/pwm_dc_motor_1/U0/cnt_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Warning
+Non-clocked sequential cell  
+The clock pin controlador_motores_i/pwm_dc_motor_1/U0/cnt_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Warning
+Non-clocked sequential cell  
+The clock pin controlador_motores_i/pwm_dc_motor_1/U0/cnt_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 

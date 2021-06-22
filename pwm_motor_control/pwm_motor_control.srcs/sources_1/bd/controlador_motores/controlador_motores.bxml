@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="controlador_motores" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1624392491"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1624392491"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1624392491"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1624392491"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1624394263"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1624394263"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1624394263"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1624394263"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\controlador_motores_mod_m_counter_0_0\controlador_motores_mod_m_counter_0_0.xci" Type="IP">
         <Instance HierarchyPath="mod_m_counter_0"/>
@@ -39,6 +39,22 @@
       <File Name="sim\controlador_motores.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\controlador_motores_control_dir_1_0\controlador_motores_control_dir_1_0.xci" Type="IP">
+        <Instance HierarchyPath="control_dir_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\controlador_motores_pwm_dc_motor_1_0\controlador_motores_pwm_dc_motor_1_0.xci" Type="IP">
+        <Instance HierarchyPath="pwm_dc_motor_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="controlador_motores_ooc.xdc" Type="XDC">

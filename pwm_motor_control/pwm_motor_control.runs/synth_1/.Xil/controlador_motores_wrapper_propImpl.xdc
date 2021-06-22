@@ -7,8 +7,16 @@ set_property src_info {type:XDC file:1 line:176 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN T21 [get_ports {out_1A}];  # "LD1"
 set_property src_info {type:XDC file:1 line:177 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U22 [get_ports {out_1B}];  # "LD2"
+set_property src_info {type:XDC file:1 line:178 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U21 [get_ports {pwm_izda}];  # "LD3"
+set_property src_info {type:XDC file:1 line:179 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V22 [get_ports {out_2A}];  # "LD4"
+set_property src_info {type:XDC file:1 line:180 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W22 [get_ports {out_2B}];  # "LD5"
 set_property src_info {type:XDC file:1 line:205 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN P16 [get_ports {reset}];  # "BTNC"
+set_property src_info {type:XDC file:1 line:207 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN N15 [get_ports {dir_motor_izda}];  # "BTNL"
 set_property src_info {type:XDC file:1 line:208 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R18 [get_ports {dir_motor_drcha}];  # "BTNR"
 set_property src_info {type:XDC file:1 line:237 export:INPUT save:INPUT read:READ} [current_design]

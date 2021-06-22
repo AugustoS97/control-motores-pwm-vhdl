@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1624392503">
+  <File Type="ROUTE-PWR" Name="controlador_motores_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="controlador_motores_wrapper.tcl"/>
+  <File Type="PWROPT-DCP" Name="controlador_motores_wrapper_pwropt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="controlador_motores_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="controlador_motores_wrapper_reports.tcl"/>
+  <File Type="BG-DRC" Name="controlador_motores_wrapper.drc"/>
+  <File Type="OPT-HWDEF" Name="controlador_motores_wrapper.hwdef"/>
+  <File Type="OPT-DCP" Name="controlador_motores_wrapper_opt.dcp"/>
+  <File Type="OPT-DRC" Name="controlador_motores_wrapper_drc_opted.rpt"/>
+  <File Type="PLACE-DCP" Name="controlador_motores_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="controlador_motores_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="controlador_motores_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="controlador_motores_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="controlador_motores_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="controlador_motores_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="controlador_motores_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="controlador_motores_wrapper_physopt.dcp"/>
+  <File Type="BG-BIT" Name="controlador_motores_wrapper.bit"/>
+  <File Type="ROUTE-ERROR-DCP" Name="controlador_motores_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="controlador_motores_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="controlador_motores_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="controlador_motores_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="controlador_motores_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="controlador_motores_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-MSK" Name="controlador_motores_wrapper.msk"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="controlador_motores_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="BG-BGN" Name="controlador_motores_wrapper.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="controlador_motores_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-RBT" Name="controlador_motores_wrapper.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="controlador_motores_wrapper_methodology_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="controlador_motores_wrapper.bin"/>
+  <File Type="ROUTE-PWR-RPX" Name="controlador_motores_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="controlador_motores_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="controlador_motores_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="controlador_motores_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="controlador_motores_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="controlador_motores_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-CLK" Name="controlador_motores_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="controlador_motores_wrapper.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="controlador_motores_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="controlador_motores_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="BITSTR-NKY" Name="controlador_motores_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="controlador_motores_wrapper_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="controlador_motores_wrapper.mmi"/>
+  <File Type="BITSTR-LTX" Name="controlador_motores_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="controlador_motores_wrapper.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Fuentes/list_ch04_11_mod_m.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Fuentes/list_ch04_11_mod_m.vhd"/>
+        <Attr Name="ImportTime" Val="1624300811"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/control_dir.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Fuentes/pwm_dc_motor.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Fuentes/pwm_dc_motor.vhd"/>
+        <Attr Name="ImportTime" Val="1624300811"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/controlador_motores/controlador_motores.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/controlador_motores/hdl/controlador_motores_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="controlador_motores_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Fuentes/zedboard_constraint.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Fuentes/zedboard_constraint.xdc"/>
+        <Attr Name="ImportTime" Val="1624308543"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="controlador_motores_mod_m_counter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="controlador_motores_control_dir_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="controlador_motores_pwm_dc_motor_0_0"/>
+</GenRun>

@@ -15,4 +15,10 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==controlador_mot
 # IP: bd/controlador_motores/ip/controlador_motores_pwm_dc_motor_0_0/controlador_motores_pwm_dc_motor_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==controlador_motores_pwm_dc_motor_0_0 || ORIG_REF_NAME==controlador_motores_pwm_dc_motor_0_0} -quiet] -quiet
 
+# IP: bd/controlador_motores/ip/controlador_motores_control_dir_1_0/controlador_motores_control_dir_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==controlador_motores_control_dir_1_0 || ORIG_REF_NAME==controlador_motores_control_dir_1_0} -quiet] -quiet
+
+# IP: bd/controlador_motores/ip/controlador_motores_pwm_dc_motor_1_0/controlador_motores_pwm_dc_motor_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==controlador_motores_pwm_dc_motor_1_0 || ORIG_REF_NAME==controlador_motores_pwm_dc_motor_1_0} -quiet] -quiet
+
 # XDC: bd/controlador_motores/controlador_motores_ooc.xdc

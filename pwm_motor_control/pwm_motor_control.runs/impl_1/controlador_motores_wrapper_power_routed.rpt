@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Tue Jun 22 21:11:08 2021
+| Date             : Tue Jun 22 21:41:01 2021
 | Host             : DESKTOP-CDDJBQR running 64-bit major release  (build 9200)
 | Command          : report_power -file controlador_motores_wrapper_power_routed.rpt -pb controlador_motores_wrapper_power_summary_routed.pb -rpx controlador_motores_wrapper_power_routed.rpx
 | Design           : controlador_motores_wrapper
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.944        |
-| Design Power Budget (W)  | Unspecified* |
-| Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.766        |
-| Device Static (W)        | 0.179        |
-| Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 51.0         |
-| Junction Temperature (C) | 59.0         |
-| Confidence Level         | Low          |
-| Setting File             | ---          |
-| Simulation Activity File | ---          |
-| Design Nets Matched      | NA           |
-+--------------------------+--------------+
++--------------------------+---------------------------------+
+| Total On-Chip Power (W)  | 5.480 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                    |
+| Power Budget Margin (W)  | NA                              |
+| Dynamic (W)              | 5.119                           |
+| Device Static (W)        | 0.362                           |
+| Effective TJA (C/W)      | 11.5                            |
+| Max Ambient (C)          | 21.8                            |
+| Junction Temperature (C) | 88.2                            |
+| Confidence Level         | Low                             |
+| Setting File             | ---                             |
+| Simulation Activity File | ---                             |
+| Design Nets Matched      | NA                              |
++--------------------------+---------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,15 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.193 |       64 |       --- |             --- |
-|   LUT as Logic |     0.169 |       29 |     53200 |            0.05 |
-|   CARRY4       |     0.013 |        4 |     13300 |            0.03 |
-|   Register     |     0.010 |       21 |    106400 |            0.02 |
-|   Others       |     0.000 |        3 |       --- |             --- |
-| Signals        |     0.235 |       55 |       --- |             --- |
-| I/O            |     2.337 |       14 |       200 |            7.00 |
-| Static Power   |     0.179 |          |           |                 |
-| Total          |     2.944 |          |           |                 |
+| Slice Logic    |     0.200 |       94 |       --- |             --- |
+|   LUT as Logic |     0.176 |       42 |     53200 |            0.08 |
+|   CARRY4       |     0.014 |        5 |     13300 |            0.04 |
+|   Register     |     0.010 |       29 |    106400 |            0.03 |
+|   Others       |     0.000 |        4 |       --- |             --- |
+| Signals        |     0.280 |       69 |       --- |             --- |
+| I/O            |     4.639 |       18 |       200 |            9.00 |
+| Static Power   |     0.362 |          |           |                 |
+| Total          |     5.480 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,20 +70,20 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.495 |       0.468 |      0.027 |
-| Vccaux    |       1.800 |     0.105 |       0.084 |      0.021 |
-| Vcco33    |       3.300 |     0.651 |       0.650 |      0.001 |
+| Vccint    |       1.000 |     0.610 |       0.524 |      0.086 |
+| Vccaux    |       1.800 |     0.209 |       0.168 |      0.041 |
+| Vcco33    |       3.300 |     1.301 |       1.300 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.002 |       0.000 |      0.002 |
+| Vccbram   |       1.000 |     0.006 |       0.000 |      0.006 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.049 |       0.000 |      0.049 |
+| Vccpint   |       1.000 |     0.132 |       0.000 |      0.132 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -144,13 +144,16 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| controlador_motores_wrapper |     2.766 |
-|   controlador_motores_i     |     0.366 |
+| controlador_motores_wrapper |     5.119 |
+|   controlador_motores_i     |     0.409 |
 |     control_dir_0           |     0.004 |
-|     mod_m_counter_0         |     0.335 |
-|       U0                    |     0.335 |
-|     pwm_dc_motor_0          |     0.027 |
-|       U0                    |     0.027 |
+|     control_dir_1           |     0.004 |
+|     mod_m_counter_0         |     0.345 |
+|       U0                    |     0.345 |
+|     pwm_dc_motor_0          |     0.029 |
+|       U0                    |     0.029 |
+|     pwm_dc_motor_1          |     0.029 |
+|       U0                    |     0.029 |
 +-----------------------------+-----------+
 
 
