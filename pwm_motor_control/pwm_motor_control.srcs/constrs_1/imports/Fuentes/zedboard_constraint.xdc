@@ -79,7 +79,7 @@
 # ----------------------------------------------------------------------------
 # Clock Source - Bank 13
 # ---------------------------------------------------------------------------- 
-#set_property PACKAGE_PIN Y9 [get_ports {GCLK}];  # "GCLK"
+set_property PACKAGE_PIN Y9 [get_ports {clk}];  # "GCLK"
 
 # ----------------------------------------------------------------------------
 # JA Pmod - Bank 13 
@@ -172,9 +172,9 @@
 # ----------------------------------------------------------------------------
 # User LEDs - Bank 33
 # ---------------------------------------------------------------------------- 
-#set_property PACKAGE_PIN T22 [get_ports {LD0}];  # "LD0"
-#set_property PACKAGE_PIN T21 [get_ports {LD1}];  # "LD1"
-#set_property PACKAGE_PIN U22 [get_ports {LD2}];  # "LD2"
+set_property PACKAGE_PIN T22 [get_ports {pwm_drcha}];  # "LD0"
+set_property PACKAGE_PIN T21 [get_ports {out_1A}];  # "LD1"
+set_property PACKAGE_PIN U22 [get_ports {out_1B}];  # "LD2"
 #set_property PACKAGE_PIN U21 [get_ports {LD3}];  # "LD3"
 #set_property PACKAGE_PIN V22 [get_ports {LD4}];  # "LD4"
 #set_property PACKAGE_PIN W22 [get_ports {LD5}];  # "LD5"
@@ -202,10 +202,10 @@
 # ----------------------------------------------------------------------------
 # User Push Buttons - Bank 34
 # ---------------------------------------------------------------------------- 
-#set_property PACKAGE_PIN P16 [get_ports {BTNC}];  # "BTNC"
+set_property PACKAGE_PIN P16 [get_ports {reset}];  # "BTNC"
 #set_property PACKAGE_PIN R16 [get_ports {BTND}];  # "BTND"
 #set_property PACKAGE_PIN N15 [get_ports {BTNL}];  # "BTNL"
-#set_property PACKAGE_PIN R18 [get_ports {BTNR}];  # "BTNR"
+set_property PACKAGE_PIN R18 [get_ports {dir_motor_drcha}];  # "BTNR"
 #set_property PACKAGE_PIN T18 [get_ports {BTNU}];  # "BTNU"
 
 # ----------------------------------------------------------------------------
@@ -234,14 +234,14 @@
 ## ----------------------------------------------------------------------------
 ## User DIP Switches - Bank 35
 ## ---------------------------------------------------------------------------- 
-#set_property PACKAGE_PIN F22 [get_ports {SW0}];  # "SW0"
-#set_property PACKAGE_PIN G22 [get_ports {SW1}];  # "SW1"
-#set_property PACKAGE_PIN H22 [get_ports {SW2}];  # "SW2"
-#set_property PACKAGE_PIN F21 [get_ports {SW3}];  # "SW3"
-#set_property PACKAGE_PIN H19 [get_ports {SW4}];  # "SW4"
-#set_property PACKAGE_PIN H18 [get_ports {SW5}];  # "SW5"
-#set_property PACKAGE_PIN H17 [get_ports {SW6}];  # "SW6"
-#set_property PACKAGE_PIN M15 [get_ports {SW7}];  # "SW7"
+set_property PACKAGE_PIN F22 [get_ports {consigna_drcha[0]}];  # "SW0"
+set_property PACKAGE_PIN G22 [get_ports {consigna_drcha[1]}];  # "SW1"
+set_property PACKAGE_PIN H22 [get_ports {consigna_drcha[2]}];  # "SW2"
+set_property PACKAGE_PIN F21 [get_ports {consigna_drcha[3]}];  # "SW3"
+set_property PACKAGE_PIN H19 [get_ports {consigna_drcha[4]}];  # "SW4"
+set_property PACKAGE_PIN H18 [get_ports {consigna_drcha[5]}];  # "SW5"
+set_property PACKAGE_PIN H17 [get_ports {consigna_drcha[6]}];  # "SW6"
+set_property PACKAGE_PIN M15 [get_ports {consigna_drcha[7]}];  # "SW7"
 
 ## ----------------------------------------------------------------------------
 ## XADC AD Channels - Bank 35
