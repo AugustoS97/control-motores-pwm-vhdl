@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun 21 21:58:53 2021" VIVADOVERSION="2017.4">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.3" DEVICE="7z020" NAME="control_motor" PACKAGE="clg484" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" LEFT="7" NAME="consigna_speed" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_consigna_speed">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pwm_dc_motor_0" PORT="entrada"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ce" SIGIS="undef" SIGNAME="External_Ports_ce">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pwm_dc_motor_0" PORT="ce"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset" SIGIS="undef" SIGNAME="External_Ports_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pwm_dc_motor_0" PORT="reset"/>
+        <CONNECTION INSTANCE="cont_preescalado_0" PORT="reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cont_preescalado_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="IN1A" SIGIS="undef" SIGNAME="External_Ports_IN1A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="OUT1A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="IN1B" SIGIS="undef" SIGNAME="External_Ports_IN1B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="OUT1B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="OUT1A" SIGIS="undef" SIGNAME="External_Ports_IN1A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="IN1A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="OUT1B" SIGIS="undef" SIGNAME="External_Ports_IN1B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="IN1B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pwm_out" SIGIS="undef" SIGNAME="pwm_dc_motor_0_PWM">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pwm_dc_motor_0" PORT="PWM"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/cont_preescalado_0" HWVERSION="1.0" INSTANCE="cont_preescalado_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cont_preescalado" VLNV="xilinx.com:module_ref:cont_preescalado:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="control_motor_cont_preescalado_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="clk_250Khz" SIGIS="undef" SIGNAME="cont_preescalado_0_clk_250Khz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pwm_dc_motor_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/pwm_dc_motor_0" HWVERSION="1.0" INSTANCE="pwm_dc_motor_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pwm_dc_motor" VLNV="xilinx.com:module_ref:pwm_dc_motor:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="control_motor_pwm_dc_motor_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="cont_preescalado_0_clk_250Khz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cont_preescalado_0" PORT="clk_250Khz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ce" SIGIS="undef" SIGNAME="External_Ports_ce">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ce"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="entrada" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_consigna_speed">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="consigna_speed"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="PWM" SIGIS="undef" SIGNAME="pwm_dc_motor_0_PWM">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pwm_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

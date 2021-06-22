@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="33">
+  <CompositeFile CompositeFileTopName="controlador_motores" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1624391710"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1624391710"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1624391710"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1624391710"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="ip\controlador_motores_mod_m_counter_0_0\controlador_motores_mod_m_counter_0_0.xci" Type="IP">
+        <Instance HierarchyPath="mod_m_counter_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\controlador_motores_control_dir_0_0\controlador_motores_control_dir_0_0.xci" Type="IP">
+        <Instance HierarchyPath="control_dir_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\controlador_motores_pwm_dc_motor_0_0\controlador_motores_pwm_dc_motor_0_0.xci" Type="IP">
+        <Instance HierarchyPath="pwm_dc_motor_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+    </FileCollection>
+  </CompositeFile>
+</Root>
