@@ -1,0 +1,229 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Sat Jun 26 17:01:39 2021
+| Host         : DESKTOP-CDDJBQR running 64-bit major release  (build 9200)
+| Command      : report_methodology -file control_motores_wrapper_methodology_drc_routed.rpt -pb control_motores_wrapper_methodology_drc_routed.pb -rpx control_motores_wrapper_methodology_drc_routed.rpx
+| Design       : control_motores_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 36
++-----------+----------+------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                      | Violations |
++-----------+----------+------------------------------------------------------------------+------------+
+| CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
+| TIMING-17 | Warning  | Non-clocked sequential cell                                      | 29         |
+| XDCC-5    | Warning  | User Non-Timing constraint/property overwritten                  | 6          |
++-----------+----------+------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CKLD-2#1 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net clk_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): clk_IBUF_inst/O
+Related violations: <none>
+
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/mod_m_counter_0/U0/r_reg_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/mod_m_counter_0/U0/r_reg_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/mod_m_counter_0/U0/r_reg_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/mod_m_counter_0/U0/r_reg_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/mod_m_counter_0/U0/r_reg_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/mod_m_counter_0/U0/r_reg_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/mod_m_counter_0/U0/r_reg_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/mod_m_counter_0/U0/r_reg_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/mod_m_counter_0/U0/r_reg_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/mod_m_counter_0/U0/r_reg_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/mod_m_counter_0/U0/r_reg_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/mod_m_counter_0/U0/r_reg_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/mod_m_counter_0/U0/r_reg_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_0/U0/cnt_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_0/U0/cnt_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_0/U0/cnt_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_0/U0/cnt_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_0/U0/cnt_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_0/U0/cnt_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_0/U0/cnt_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_0/U0/cnt_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_1/U0/cnt_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_1/U0/cnt_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_1/U0/cnt_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_1/U0/cnt_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_1/U0/cnt_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_1/U0/cnt_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_1/U0/cnt_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Warning
+Non-clocked sequential cell  
+The clock pin control_motores_i/pwm_dc_motor_1/U0/cnt_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+XDCC-5#1 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property PACKAGE_PIN on out_1A overrides a previous user property.
+New Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/control_motores_pwm_Zed/control_motores_pwm_Zed.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 176)
+Previous Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/control_motores_pwm_Zed/control_motores_pwm_Zed.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 89)
+Related violations: <none>
+
+XDCC-5#2 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property PACKAGE_PIN on out_1B overrides a previous user property.
+New Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/control_motores_pwm_Zed/control_motores_pwm_Zed.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 177)
+Previous Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/control_motores_pwm_Zed/control_motores_pwm_Zed.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 90)
+Related violations: <none>
+
+XDCC-5#3 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property PACKAGE_PIN on out_2A overrides a previous user property.
+New Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/control_motores_pwm_Zed/control_motores_pwm_Zed.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 179)
+Previous Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/control_motores_pwm_Zed/control_motores_pwm_Zed.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 101)
+Related violations: <none>
+
+XDCC-5#4 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property PACKAGE_PIN on out_2B overrides a previous user property.
+New Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/control_motores_pwm_Zed/control_motores_pwm_Zed.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 180)
+Previous Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/control_motores_pwm_Zed/control_motores_pwm_Zed.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 102)
+Related violations: <none>
+
+XDCC-5#5 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property PACKAGE_PIN on pwm_drcha overrides a previous user property.
+New Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/control_motores_pwm_Zed/control_motores_pwm_Zed.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 175)
+Previous Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/control_motores_pwm_Zed/control_motores_pwm_Zed.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 87)
+Related violations: <none>
+
+XDCC-5#6 Warning
+User Non-Timing constraint/property overwritten  
+A new XDC property PACKAGE_PIN on pwm_izda overrides a previous user property.
+New Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/control_motores_pwm_Zed/control_motores_pwm_Zed.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 178)
+Previous Source: C:/Users/Augusto/Desktop/Proyecto2_FPGA/control_motores_pwm_Zed/control_motores_pwm_Zed.srcs/constrs_1/imports/Fuentes/zedboard_constraint.xdc (Line: 100)
+Related violations: <none>
+
+
