@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
---Date        : Sat Jun 26 16:58:10 2021
+--Date        : Mon Jul  5 18:31:41 2021
 --Host        : DESKTOP-CDDJBQR running 64-bit major release  (build 9200)
 --Command     : generate_target control_motores.bd
 --Design      : control_motores
@@ -29,7 +29,7 @@ entity control_motores is
     reset : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of control_motores : entity is "control_motores,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=control_motores,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=6,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of control_motores : entity is "control_motores,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=control_motores,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=6,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of control_motores : entity is "control_motores.hwdef";
 end control_motores;
@@ -60,14 +60,6 @@ architecture STRUCTURE of control_motores is
     PWM : out STD_LOGIC
   );
   end component control_motores_pwm_dc_motor_1_0;
-  component control_motores_decoder_0_0 is
-  port (
-    motor_drcha_consigna : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    motor_izda_consigna : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    consigna_drcha : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    consigna_izda : out STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component control_motores_decoder_0_0;
   component control_motores_control_direccion_0_0 is
   port (
     direccion : in STD_LOGIC;
@@ -84,6 +76,14 @@ architecture STRUCTURE of control_motores is
     dir_B : out STD_LOGIC
   );
   end component control_motores_control_direccion_1_0;
+  component control_motores_decoder_0_0 is
+  port (
+    motor_drcha_consigna : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    motor_izda_consigna : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    consigna_drcha : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    consigna_izda : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component control_motores_decoder_0_0;
   signal clk_1 : STD_LOGIC;
   signal consigna_drcha_1 : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal consigna_izda_1 : STD_LOGIC_VECTOR ( 2 downto 0 );

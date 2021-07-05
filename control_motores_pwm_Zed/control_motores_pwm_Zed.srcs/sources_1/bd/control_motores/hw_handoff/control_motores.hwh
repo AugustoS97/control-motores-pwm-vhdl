@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Jun 26 16:58:10 2021" VIVADOVERSION="2017.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul  5 18:31:42 2021" VIVADOVERSION="2017.4">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.3" DEVICE="7z020" NAME="control_motores" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -18,14 +18,9 @@
         <CONNECTION INSTANCE="pwm_dc_motor_0" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="2" NAME="consigna_izda" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_consigna_izda">
+    <PORT DIR="I" NAME="enable_drcha" SIGIS="undef" SIGNAME="External_Ports_enable_drcha">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="decoder_0" PORT="motor_izda_consigna"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="2" NAME="consigna_drcha" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_consigna_drcha">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="decoder_0" PORT="motor_drcha_consigna"/>
+        <CONNECTION INSTANCE="control_direccion_0" PORT="enable"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="dir_motor_drcha" SIGIS="undef" SIGNAME="External_Ports_dir_motor_drcha">
@@ -33,19 +28,9 @@
         <CONNECTION INSTANCE="control_direccion_0" PORT="direccion"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="dir_motor_izda" SIGIS="undef" SIGNAME="External_Ports_dir_motor_izda">
+    <PORT DIR="O" NAME="pwm_drcha" SIGIS="undef" SIGNAME="pwm_dc_motor_1_PWM">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="control_direccion_1" PORT="direccion"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="enable_izda" SIGIS="undef" SIGNAME="External_Ports_enable_izda">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="control_direccion_1" PORT="enable"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="enable_drcha" SIGIS="undef" SIGNAME="External_Ports_enable_drcha">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="control_direccion_0" PORT="enable"/>
+        <CONNECTION INSTANCE="pwm_dc_motor_1" PORT="PWM"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="out_1A" SIGIS="undef" SIGNAME="control_direccion_0_dir_A">
@@ -58,6 +43,31 @@
         <CONNECTION INSTANCE="control_direccion_0" PORT="dir_B"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" NAME="pwm_izda" SIGIS="undef" SIGNAME="pwm_dc_motor_0_PWM">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pwm_dc_motor_0" PORT="PWM"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="enable_izda" SIGIS="undef" SIGNAME="External_Ports_enable_izda">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="control_direccion_1" PORT="enable"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="dir_motor_izda" SIGIS="undef" SIGNAME="External_Ports_dir_motor_izda">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="control_direccion_1" PORT="direccion"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="2" NAME="consigna_drcha" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_consigna_drcha">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="decoder_0" PORT="motor_drcha_consigna"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="2" NAME="consigna_izda" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_consigna_izda">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="decoder_0" PORT="motor_izda_consigna"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="O" NAME="out_2A" SIGIS="undef" SIGNAME="control_direccion_1_dir_A">
       <CONNECTIONS>
         <CONNECTION INSTANCE="control_direccion_1" PORT="dir_A"/>
@@ -66,16 +76,6 @@
     <PORT DIR="O" NAME="out_2B" SIGIS="undef" SIGNAME="control_direccion_1_dir_B">
       <CONNECTIONS>
         <CONNECTION INSTANCE="control_direccion_1" PORT="dir_B"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="pwm_drcha" SIGIS="undef" SIGNAME="pwm_dc_motor_1_PWM">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="pwm_dc_motor_1" PORT="PWM"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="pwm_izda" SIGIS="undef" SIGNAME="pwm_dc_motor_0_PWM">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="pwm_dc_motor_0" PORT="PWM"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>

@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="control_motores" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1624723090"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1624723090"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1624723090"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1624723090"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1625506302"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1625506302"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1625506302"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1625506302"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\control_motores_control_direccion_0_0\control_motores_control_direccion_0_0.xci" Type="IP">
         <Instance HierarchyPath="control_direccion_0"/>

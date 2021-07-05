@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Sat Jun 26 17:01:40 2021
+| Date             : Mon Jul  5 18:47:24 2021
 | Host             : DESKTOP-CDDJBQR running 64-bit major release  (build 9200)
 | Command          : report_power -file control_motores_wrapper_power_routed.rpt -pb control_motores_wrapper_power_summary_routed.pb -rpx control_motores_wrapper_power_routed.rpx
 | Design           : control_motores_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 4.978        |
+| Total On-Chip Power (W)  | 5.050        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 4.668        |
-| Device Static (W)        | 0.311        |
+| Dynamic (W)              | 4.733        |
+| Device Static (W)        | 0.317        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 27.6         |
-| Junction Temperature (C) | 82.4         |
+| Max Ambient (C)          | 26.8         |
+| Junction Temperature (C) | 83.2         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,15 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.230 |      108 |       --- |             --- |
-|   LUT as Logic |     0.206 |       52 |     53200 |            0.10 |
+| Slice Logic    |     0.234 |      108 |       --- |             --- |
+|   LUT as Logic |     0.209 |       52 |     53200 |            0.10 |
 |   CARRY4       |     0.014 |        5 |     13300 |            0.04 |
 |   Register     |     0.010 |       29 |    106400 |            0.03 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |     0.294 |       84 |       --- |             --- |
+| Signals        |     0.356 |       84 |       --- |             --- |
 | I/O            |     4.144 |       18 |       200 |            9.00 |
-| Static Power   |     0.311 |          |           |                 |
-| Total          |     4.978 |          |           |                 |
+| Static Power   |     0.317 |          |           |                 |
+| Total          |     5.050 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,8 +70,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.637 |       0.568 |      0.069 |
-| Vccaux    |       1.800 |     0.186 |       0.150 |      0.036 |
+| Vccint    |       1.000 |     0.705 |       0.634 |      0.071 |
+| Vccaux    |       1.800 |     0.187 |       0.150 |      0.037 |
 | Vcco33    |       3.300 |     1.161 |       1.160 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -83,7 +83,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.109 |       0.000 |      0.109 |
+| Vccpint   |       1.000 |     0.112 |       0.000 |      0.112 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -144,18 +144,18 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| control_motores_wrapper |     4.668 |
-|   control_motores_i     |     0.447 |
-|     control_direccion_0 |     0.009 |
-|     control_direccion_1 |     0.013 |
-|     decoder_0           |     0.039 |
+| control_motores_wrapper |     4.733 |
+|   control_motores_i     |     0.498 |
+|     control_direccion_0 |     0.026 |
+|     control_direccion_1 |     0.024 |
+|     decoder_0           |     0.037 |
+|       U0                |     0.031 |
+|     mod_m_counter_0     |     0.345 |
+|       U0                |     0.345 |
+|     pwm_dc_motor_0      |     0.034 |
+|       U0                |     0.034 |
+|     pwm_dc_motor_1      |     0.033 |
 |       U0                |     0.033 |
-|     mod_m_counter_0     |     0.341 |
-|       U0                |     0.341 |
-|     pwm_dc_motor_0      |     0.025 |
-|       U0                |     0.025 |
-|     pwm_dc_motor_1      |     0.022 |
-|       U0                |     0.022 |
 +-------------------------+-----------+
 
 

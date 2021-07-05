@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="control_motores_decoder_0_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1624721374">
+<GenRun Id="control_motores_decoder_0_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1625506322">
   <File Type="PA-TCL" Name="control_motores_decoder_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="control_motores_decoder_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="control_motores_decoder_0_0_reports.tcl"/>
@@ -12,9 +12,11 @@
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/control_motores_decoder_0_0">
     <File Path="$PSRCDIR/sources_1/bd/control_motores/ip/control_motores_decoder_0_0/control_motores_decoder_0_0.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>
@@ -25,9 +27,11 @@
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/control_motores_decoder_0_0">
     <File Path="$PSRCDIR/sources_1/bd/control_motores/ip/control_motores_decoder_0_0/control_motores_decoder_0_0.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>

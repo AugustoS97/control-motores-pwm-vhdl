@@ -42,16 +42,17 @@ end decoder;
 architecture Behavioral of decoder is
 
 begin
-
+                  
 with motor_drcha_consigna select
-    consigna_drcha <= "00000000" when "000",
-                  "00000011" when "001",
-                  "00000111" when "010",
-                  "00001111" when "011",
-                  "00011111" when "100",
-                  "00111111" when "101",
-                  "01111111" when "110",
-                  "11111111" when "111";
+           consigna_drcha <= "00000000" when "000",
+                                    "00000011" when "001",
+                                    "00000111" when "010",
+                                    "00001111" when "011",
+                                    "00011111" when "100",
+                                    "00111111" when "101",
+                                    "01111111" when "110",
+                                    "11111111" when "111";                  
+
                  
 with motor_izda_consigna select
      consigna_izda <= "00000000" when "000",
