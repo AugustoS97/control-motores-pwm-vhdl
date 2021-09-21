@@ -1,1 +1,0 @@
-Proyecto de control de 1 solo motor 
